@@ -2,9 +2,9 @@
 var slashcount = window.location.href.split("/").length;
 if(slashcount >= 5) { // we are in a repo
   // find a top level LICENSE* file
-  var licenseurl = $('a[href*="LICENSE"]').attr("href");
+  var licenseurl = $('a[href*="LICENSE"], a[href*="LICENCE"]').attr("href");
   $.get(licenseurl, null, function(data, status, result) {
-    if(data.match(/gpl/i)) { // grep it for *GPL*
+    if(data.match(/(gpl|GNU General Public)/i)) { // grep it for *GPL*
       // paint red tape
       $("body").prepend($("<h2>Watch out, this repository contains GPL licensed code!</h2>")
         .css({
