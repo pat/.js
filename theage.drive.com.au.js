@@ -1,10 +1,3 @@
-// rootUrl = window.location.href.match(/theage\.com\.au\/?$/);
-//
-// if (rootUrl && confirm("Shouldn't you be viewing something more intelligent?"))
-// {
-//   window.location.href = 'http://abc.net.au/news';
-// }
-//
 $('.ad').remove();
 $('.c5.classifieds.cfix').remove();
 $('.fN-affiliateStrip').remove();
